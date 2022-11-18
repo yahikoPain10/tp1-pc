@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- STYLES -->
+    <link rel="stylesheet" href="style.css">
+    <!-- SCRIPTS -->
+    <script defer src="js/script.js"></script>
+    <script defer src="js/canvas.js"></script>
+    <script defer src="js/render.js"></script>
+    <title>TP Physique</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1 align="center">Correction TP physique 1</h1>
+
+        <!-- MESURES -->
+        <section>
+            <h4 class="title">Tableau de mesures</h4>
+            <table>
+                <tbody id="mesures"></tbody>
+            </table>
+        </section>
+
+        <!-- CLASSES -->
+        <section class="classes">
+            <h4 class="title">La famille de classes</h4>
+            <ul id="family"></ul>
+        </section>
+
+        <!-- RESULTATS -->
+        <section class="tab-resulat">
+            <h4 class="title">Les résultats expérimentaux</h4>
+            <table>
+                <tbody id="result"></tbody>
+            </table>
+        </section>
+
+        <!-- HISTOGRAMME -->
+        <section>
+            <h4 class="title">L'histogramme</h4>
+            <div class="histogram">
+                <div class="info">
+                    <p>
+                        <strong>L'axe X: </strong>
+                        représente l'axe des valeures centrales de 13.7 à 13.85 (1 carreau = 0.1).
+                    </p>
+                    <p>
+                        <strong>L'axe Y: </strong>
+                        représente l'axe des effectifs de 0 à 15 (1 carreau = 1).
+                    </p>
+                    <p>
+                        <strong>L'allure de l'enveloppe de l'histograme: </strong>
+                        C'est un <b>gaussienne</b>.
+                    </p>
+                </div>    
+                <div class="canvas-container">
+                    <canvas id="canvas"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- VALEURS -->
+        <section class="valeurs">
+            <h4 class="title">Tableau des valeurs</h4>
+            <table>
+                <tbody>
+                    <!-- A questions -->
+
+                    <tr class="qt">
+                        <td rowspan="8">Question A</td>
+                    </tr>
+                    <tr>
+                        <td>La période Théoriquement</td>
+                        <td>1.40<mark>s</mark></td>
+                    </tr>
+                    <tr>
+                        <td>ΔT</td>
+                        <td>0.0168<mark>s</mark></td>
+                    </tr>
+                    <tr>
+                        <td>Temps moyen de 10 ocillations</td>
+                        <td>13.738<mark>s</mark></td>
+                    </tr>
+                    <tr>
+                        <td>Son ecart type</td>
+                        <td>0.0188<mark>V</mark></td>
+                    </tr>
+                    <tr>
+                        <td>La valeur moyenne de la période (expérimentalle)</td>
+                        <td>1.37<mark>s</mark></td>
+                    </tr>
+                    <tr>
+                        <td>ΔT correspondante</td>
+                        <td>0.0164<mark>s</mark></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Pour la comparaison comparer les valeurs expérimentalles et théoriques (T et ΔT)</td>
+                    </tr>
+
+                    <!-- B questions -->
+                    <tr class="qt">
+                        <td rowspan="8">Question B</td>
+                    </tr>
+                    <tr>
+                        <td>Diametre moyen</td>
+                        <td>20.348<mark>mm</mark></td>
+                    </tr>
+                    <tr>
+                        <td>Δdm</td>
+                        <td>0,008<mark>mm</mark></td>
+                    </tr>
+                    <tr>
+                        <td>La valeur de d</td>
+                        <td>20.16<mark>mm</mark></td>
+                    </tr>
+                    <tr>
+                        <td>La valeur de Δd</td>
+                        <td>1.54<mark>mm</mark></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Pour la comparaison comparer les valeurs expérimentalles et théoriques (d et Δd)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+</html>

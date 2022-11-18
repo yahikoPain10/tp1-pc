@@ -1,0 +1,164 @@
+/* Global */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    font-size: 100%;
+    line-height: 1.5;
+}
+
+body {
+    color: rgb(26, 26, 26);
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0 auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 1200px;
+    padding: 0 1rem;
+    counter-reset: list;
+}
+
+.title {
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+section {
+    display: block;
+    overflow-x: auto;
+    margin: 2rem 0;
+}
+
+h1 {
+    margin-top: 1rem;
+}
+
+
+/* Tableau de mesures */
+
+table {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table td {
+    border: 1px solid #dbdbdb;
+    padding: .5rem 1rem;
+    text-align: center;
+}
+
+#results tr td:first-child {
+    font-weight: 600;
+}
+
+table tr:nth-child(odd) {
+    background-color: #f7f7f7;
+}
+
+/* Family class */
+
+ul#family {
+    display: grid;
+    background-color: #f7f7f7;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    list-style-type: none;
+}
+
+ul#family li {
+    position: relative;
+    font-size: 14px;
+}
+
+ul#family li::before {
+    --gap: 5px;
+    position: absolute;
+    left: 0;
+    transform: translateX(calc(-100% - var(--gap)));
+    counter-increment: list;
+    content: counter(list) ". ";
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 992px) {
+    ul#family {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    ul#family {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Canvas */
+
+.canvas-container {
+    overflow: hidden;
+}
+
+canvas {
+    display: block;
+}
+
+.histogram {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f7f7f7;
+    padding: 1rem;
+}
+
+.histogram > * {
+    flex: 1 1 0;
+}
+
+.histogram strong {
+    color: #0f8cfa;
+    font-weight: 500;
+}
+
+.histogram p {
+    margin-bottom: .5rem;
+}
+
+@media screen and (min-width: 768px) {
+    .histogram p {
+        padding-right: .5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .histogram .info {
+        order: 2;
+        padding-top: 1.5rem;
+    }
+    .histogram > * {
+        flex: none;
+        width: 100%;
+    }
+}
+
+mark {
+    background-color: #d1ecff;
+    color: #111;
+}
+
+.valeurs td{
+    text-align: left;
+}
+
+.valeurs tr:last-child td {
+    text-align: center;
+}
+
+.qt td {
+    writing-mode: vertical-rl;
+    text-align: center; 
+}
