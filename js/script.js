@@ -69,9 +69,3 @@ for(var i = 0; i < points.length; i++) {
     points[i].x = fix((valeursCentrales[i] - 13.7) * 100,2);
     points[i].y = effectifs[i];
 }
-
-var diametres = [20.35, 20.34, 20.36, 20.34, 20.35];
-var dm = 20.348;
-
-console.log(diametres.map(e => dm - e));
-
